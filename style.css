@@ -1,0 +1,580 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:#0b0b0b;
+  color:white;
+  overflow-x:hidden;
+}
+
+img{
+  display:block;
+}
+
+.container{
+  width:100%;
+  max-width:1200px;
+  margin:auto;
+  padding:0 20px;
+}
+
+section{
+  position:relative;
+  padding:120px 0;
+  overflow:hidden;
+}
+
+/* =========================================
+NAVBAR
+========================================= */
+
+.navbar{
+  position:fixed;
+  top:0;
+  width:100%;
+
+  padding:20px 40px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  background:rgba(0,0,0,0.4);
+
+  backdrop-filter:blur(15px);
+
+  border-bottom:
+  1px solid rgba(255,255,255,0.08);
+
+  z-index:999;
+}
+
+.logo{
+  font-size:1.5rem;
+  font-weight:700;
+  color:#4169E1;
+  text-decoration: none;
+}
+
+.menu{
+  display:flex;
+  gap:30px;
+  list-style:none;
+}
+
+.menu a{
+  color:white;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.menu a:hover{
+  color:#4169E1;
+}
+
+.menu-mobile{
+  display:none;
+  font-size:2rem;
+  cursor:pointer;
+}
+
+/* =========================================
+ToPO
+========================================= */
+
+.topo{
+
+  height:100vh;
+
+  background-image:
+  linear-gradient(
+  rgba(0,0,0,0.6),
+  rgba(0,0,0,0.8)),
+  url(img/22755884-bonito-forte-atletico-homens-bombeamento-acima-musculos-exercite-se-musculacao-conceito-fundo-muscular-fisiculturista-bonito-homens-fazendo-exercicios-dentro-academia-nu-ai-gerado-obra-de-arte-foto.webp);
+
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  position:relative;
+}
+
+.topo-content{
+  position:relative;
+  z-index:2;
+  text-align:center;
+}
+
+.topo-content h1{
+  font-size:5rem;
+  margin-bottom:20px;
+}
+
+.topo-content p{
+  font-size:1.3rem;
+  margin-bottom:30px;
+  max-width:700px;
+}
+
+/* =========================================
+BUTTON
+========================================= */
+
+.button{
+  padding:15px 30px;
+
+  border:none;
+  border-radius:10px;
+
+  background:
+  linear-gradient(45deg,#4169E1,#5d82f0);
+
+  color:white;
+
+  font-size:1rem;
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:0.3s;
+  
+  text-decoration: none;
+}
+
+.button:hover{
+  transform:scale(1.05);
+}
+
+/* =========================================
+TITULOS
+========================================= */
+
+.titulo-secao{
+  text-align:center;
+  font-size:3rem;
+  margin-bottom:60px;
+}
+
+/* =========================================
+PLANOS
+========================================= */
+
+#planos{
+
+  background-image:
+  linear-gradient(
+  rgba(0,0,0,0.85),
+  rgba(0,0,0,0.85)),
+  url("img/planosphoto-1623874514711-0f321325f318.avif");
+
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+}
+
+.cards{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+.card{
+  width:300px;
+
+  background:
+  rgba(255,255,255,0.06);
+
+  backdrop-filter:blur(12px);
+
+  padding:40px;
+
+  border-radius:20px;
+
+  text-align:center;
+
+  transition:0.4s;
+
+  border:
+  1px solid rgba(255,255,255,0.08);
+
+  box-shadow:
+  0 10px 30px rgba(0,0,0,0.3);
+}
+
+.card:hover{
+  transform:
+  translateY(-10px)
+  scale(1.02);
+
+  box-shadow:
+  0 0 40px rgba(65,105,225,0.5);
+}
+
+.card i{
+  font-size:3rem;
+  margin-bottom:20px;
+  color:#4169E1;
+}
+
+.card h3{
+  font-size:2rem;
+  margin-bottom:20px;
+}
+
+.card p{
+  margin-bottom:20px;
+}
+
+.card span{
+  display:block;
+  font-size:2rem;
+  color:#4169E1;
+  margin-bottom:20px;
+}
+
+/* =========================================
+MODALIDADES
+========================================= */
+
+#modalidades{
+
+  background-image:
+  linear-gradient(
+  rgba(0,0,0,0.85),
+  rgba(0,0,0,0.85)),
+  url(img/modalidadesphoto-1638536535079-878c091b6415.avif);
+
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+}
+
+.modalidades-grid{
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(250px,1fr));
+
+  gap:30px;
+}
+
+.modalidade-card{
+  background:
+  rgba(255,255,255,0.05);
+
+  backdrop-filter:blur(10px);
+
+  border-radius:20px;
+
+  overflow:hidden;
+
+  transition:0.4s;
+
+  border:
+  1px solid rgba(255,255,255,0.08);
+}
+
+.modalidade-card:hover{
+  transform:
+  translateY(-10px)
+  scale(1.02);
+
+  box-shadow:
+  0 0 40px rgba(65,105,225,0.5);
+}
+
+.modalidade-card h3{
+  text-align:center;
+  padding:20px;
+}
+
+/* =========================================
+ACADEMIA
+========================================= */
+
+#academia{
+
+  background-image:
+  linear-gradient(
+  rgba(0,0,0,0.88),
+  rgba(0,0,0,0.88)),
+  url("img/areas-musculacao.webp");
+
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+}
+
+#academia .container{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.academia{
+  width:300px;
+
+  background:
+  rgba(255,255,255,0.05);
+
+  backdrop-filter:blur(10px);
+
+  padding:20px;
+
+  border-radius:20px;
+
+  text-align:center;
+
+  transition:0.4s;
+
+  border:
+  1px solid rgba(255,255,255,0.08);
+}
+
+.academia:hover{
+  transform:
+  translateY(-10px)
+  scale(1.02);
+
+  box-shadow:
+  0 0 40px rgba(65,105,225,0.5);
+}
+
+.academia img{
+
+  width:100%;
+  border-radius:10px;
+  margin-top:20px;
+}
+
+/* =========================================
+DIFERENCIAIS
+========================================= */
+
+.diferenciais{
+
+  background-image:
+  linear-gradient(
+  rgba(0,0,0,0.7),
+  rgba(0,0,0,0.8)),
+  url("img/academiaphoto-1693214674451-d6bd02e642d1\ \(Copiar\ 1\).avif");
+
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+}
+
+.diferenciais-content{
+  max-width:700px;
+}
+
+.diferenciais h2{
+  font-size:3rem;
+  margin:30px 0 20px;
+  color:#4169E1;
+}
+
+.diferenciais p{
+  line-height:1.7;
+  color:#ddd;
+}
+
+/* =========================================
+CONTADOR
+========================================= */
+
+.contador{
+
+  background-image:
+  linear-gradient(
+  rgba(0,0,0,0.85),
+  rgba(0,0,0,0.85)),
+  url("img/equipamentophoto-1722925541321-f52d45b29c17.avif");
+
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+}
+
+.contador-grid{
+  display:flex;
+  justify-content:center;
+  gap:50px;
+  flex-wrap:wrap;
+}
+
+.numero-box{
+  text-align:center;
+}
+
+.numero-box h2{
+  font-size:4rem;
+  color:#4169E1;
+}
+
+/* =========================================
+UNIDADES
+========================================= */
+
+#unidades{
+
+  background-image:
+  linear-gradient(
+  rgba(0,0,0,0.88),
+  rgba(0,0,0,0.88)),
+  url("img/czM6Ly90cC1pbWFnZS1hZG1pbi1wcm9kL2d5bXMvZ2c3M3kxamsyMzQxbzVqYWM5aTJpYThlN2pmOXV3ZzJkZHd2cXpobnpkaHprbGpkbDNsMDhuNHhwZTAw.webp");
+
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+}
+
+.unidades-grid{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+.unidade{
+  background:
+  rgba(255,255,255,0.05);
+
+  backdrop-filter:blur(10px);
+
+  padding:40px;
+
+  width:300px;
+
+  border-radius:20px;
+
+  text-align:center;
+
+  transition:0.4s;
+
+  border:
+  1px solid rgba(255,255,255,0.08);
+}
+
+.unidade:hover{
+  transform:
+  translateY(-10px)
+  scale(1.02);
+
+  box-shadow:
+  0 0 40px rgba(65,105,225,0.5);
+}
+
+/* =========================================
+WHATSAPP
+========================================= */
+
+.whatsapp{
+  position:fixed;
+
+  right:20px;
+  bottom:20px;
+
+  width:60px;
+  height:60px;
+
+  background:#25D366;
+
+  color:white;
+
+  border-radius:50%;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  font-size:2rem;
+
+  text-decoration:none;
+
+  z-index:999;
+}
+
+/* =========================================
+FOOTER
+========================================= */
+
+footer{
+  background:#050505;
+  text-align:center;
+  padding:40px;
+}
+
+/* =========================================
+ANIMAÇÕES
+========================================= */
+
+.hidden{
+  opacity:0;
+
+  transform:translateY(40px);
+
+  transition:1s;
+}
+
+.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* =========================================
+RESPONSIVO
+========================================= */
+
+@media(max-width:768px){
+
+  .menu{
+    position:absolute;
+
+    top:80px;
+    right:0;
+
+    background:#111;
+
+    width:100%;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    padding:20px;
+
+    display:none;
+  }
+
+  .menu.active{
+    display:flex;
+  }
+
+  .menu-mobile{
+    display:block;
+  }
+
+  .topo-content h1{
+    font-size:3rem;
+  }
+
+  .titulo-secao{
+    font-size:2rem;
+  }
+
+}
